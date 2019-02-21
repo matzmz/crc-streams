@@ -1,0 +1,28 @@
+{
+  "name": "crc-write-stream",
+  "version": "1.0.0",
+  "description": "CRC Write Stream",
+  "main": "index.js",
+  "dependencies": {
+    "crc": "^3.8.0",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CRC",
+    "stream"
+  ],
+  "author": "matz.mz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matzmz/crc-write-stream.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matzmz/crc-write-stream/issues"
+  },
+  "homepage": "https://github.com/matzmz/crc-write-stream#readme"
+}
