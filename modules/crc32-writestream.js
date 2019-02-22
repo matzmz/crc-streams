@@ -8,7 +8,7 @@ class CRC32WriteStream extends stream.Writable {
         super();
         this.rawSize = 0;
 
-        if (intialValue) {
+        if (initialValue) {
             this.checksum = initialValue;
         }
         else {

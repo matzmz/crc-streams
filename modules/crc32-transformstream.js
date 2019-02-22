@@ -8,7 +8,7 @@ class CRC32TransformStream extends stream.Transform {
         super();
         this.rawSize = 0;
 
-        if (intialValue) {
+        if (initialValue) {
             this.checksum = initialValue;
         }
         else {
