@@ -1,9 +1,9 @@
-const debug = require('debug')('crc32-write-streamer');
+const debug = require('debug')('crc32-transform-streamer');
 const stream = require('stream');
 const crc32 = require('crc').crc32;
 
 
-class CRC32WriteStream extends stream.Writable {
+class CRC32TransformStream extends stream.Transform {
     constructor(initialValue) {
         super();
         this.rawSize = 0;
@@ -19,11 +19,11 @@ class CRC32WriteStream extends stream.Writable {
         debug(`initialized value:${initialValue}`);
     }
 
-    _write(chunk, enc, next) {
+    _transform(chunk, enc, done) {
         this.checksum = crc32(chunk, this.checksum);
         this.rawSize += chunk.length;
         debug(`read ${chunk.length} bytes - checksum ${this.hex()}`);
-        next();
+        done(null, chunk);
     }
 
     digest(encoding) {
@@ -42,4 +42,4 @@ class CRC32WriteStream extends stream.Writable {
 
 }
 
-module.exports = CRC32WriteStream;
+module.exports = CRC32TransformStream;

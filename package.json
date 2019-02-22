@@ -1,5 +1,5 @@
 {
-  "name": "crc-write-stream",
+  "name": "crc-streams",
   "version": "1.0.0",
   "description": "CRC Write Stream",
   "main": "index.js",
