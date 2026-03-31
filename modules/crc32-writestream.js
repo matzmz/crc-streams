@@ -1,6 +1,6 @@
 const debug = require('debug')('crc32-write-streamer');
 const stream = require('stream');
-const crc32 = require('crc').crc32;
+const crc32 = require('crc/crc32');
 
 
 class CRC32WriteStream extends stream.Writable {
